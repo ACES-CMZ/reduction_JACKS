@@ -43,31 +43,28 @@ if racenter < 0:
 deccenter = ( np.max(ptgcenters[1]) + np.min(ptgcenters[1]) )*0.5 # radian
 
 # Check the spws
-xaxis = 'channel'
-yaxis = 'amp'
-avgtime = '1e8'
-spw = '0~15'
-antenna = 'ea01'
+#xaxis = 'channel'
+#yaxis = 'amp'
+#avgtime = '1e8'
+#spw = '0~15'
+#antenna = 'ea01'
 #plotms(vis=inputvis, xaxis=xaxis, yaxis=yaxis, avgtime=avgtime, spw=spw, antenna=antenna, avgscan=True, iteraxis='spw',coloraxis='corr')
 
 ## Flag problematic channels
-mode = 'manual'
-spw = '3:0~10,8:0~10;32~38,1:30~35,2:6~11;20~25,6:20~25,7:46~50'
-flagbackup=False
-flagdata(vis=inputvis, mode=mode, spw=spw, flagbackup=flagbackup)
-mode = 'manual'
-spw = '0~15:0~1;62~63,4;9:58~63'
-flagbackup=False
-flagdata(vis=inputvis, mode=mode, spw=spw, flagbackup=flagbackup)
-#ant = 'ea23'
-#corr = 'LL'
-#flagdata(vis=inputvis, mode=mode, antenna=ant, spw=spw, correlation=corr, flagbackup=flagbackup)
+#mode = 'manual'
+#spw = '3:0~10,8:0~10;32~38,1:30~35,2:6~11;20~25,6:20~25,7:46~50'
+#flagbackup=False
+#flagdata(vis=inputvis, mode=mode, spw=spw, flagbackup=flagbackup)
+#mode = 'manual'
+#spw = '0~15:0~1;62~63,4;9:58~63'
+#flagbackup=False
+#flagdata(vis=inputvis, mode=mode, spw=spw, flagbackup=flagbackup)
 
-mode = 'manual'
-spw = '6:0~25,7:0~63'
-antenna = 'ea11&ea22;ea05&ea17'
-flagbackup=False
-flagdata(vis=inputvis, mode=mode, spw=spw, antenna=antenna, flagbackup=flagbackup)
+#mode = 'manual'
+#spw = '6:0~25,7:0~63'
+#antenna = 'ea11&ea22;ea05&ea17'
+#flagbackup=False
+#flagdata(vis=inputvis, mode=mode, spw=spw, antenna=antenna, flagbackup=flagbackup)
 ## RFI in spw 6/7/8?
 ## We should still run hifv_checkflag to remove RFI?
 
